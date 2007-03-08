@@ -9,6 +9,9 @@ public class Test_1 {
 		// TODO Auto-generated method stub
 		System.out.println("JAVA SVN DONE !");
 		System.out.println( "MAKE CHANGES !");
+		
+		//added by suhel labtop
+		System.out.println("Laptop !");
 
 	}
 
