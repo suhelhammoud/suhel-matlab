@@ -1,4 +1,4 @@
-function [data,prog]=importfile(inDir,datafile)
+function [data , prog ]= importfile ( inDir, datafile)
 
 %IMPORTFILE(FILETOREAD1)
 %  Imports data from the specified file
@@ -8,7 +8,7 @@ function [data,prog]=importfile(inDir,datafile)
 
 % Import the file
 
- fileToRead1=fullfile( inDir, datafile);
+ fileToRead1= fullfile( inDir, datafile);
  rawData1 = importdata(fileToRead1);
  data=rawData1;
  prog= data(1,:)';
