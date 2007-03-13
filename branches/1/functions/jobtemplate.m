@@ -3,7 +3,7 @@ function jt=jobtemplate()
 inDir='in';
 outDir='out';
 fPre='pre_';
-datafile='all.xls';
+datafile='all.csv';
 seg=200;
 interl=5;
 
