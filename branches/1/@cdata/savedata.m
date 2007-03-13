@@ -1,16 +1,23 @@
-%Latest suhel
+
 function savedata(varargin)
+
 p = varargin{1};
 prog = p.prog;
 data = p.data;
 idat = p.idat;
 dat = p.dat;
 jt = p.jt;
-suffix = '.xls';
+suffix = '';
 
-% if ( nargin >1)
-%     suffix = strcat('.',varargin(2)); % for example '.xls'
-% end
+
+
+
+if ( nargin >1)
+    suffix=strtrim( suffix);
+    suffix = strcat('.',varargin{2}); % for example '.xls'
+    
+end
+
 
 %Make the output directory
 mkdir(jt.outDir);
@@ -28,8 +35,7 @@ save(fullfile(fwhere,strcat('idat',suffix)),'idat', '-ascii', '-tabs');
 
 % -save Partitions in 'dat' cell array
 for i=1:size(dat,2)
-    fileName=jt.fPre
-    tmps=fullfile(fwhere,strcat(jt.fPre,int2str(i),'.', suffix));
+    tmps=fullfile(fwhere,strcat(jt.fPre,int2str(i), suffix));
     tmpv=dat{i};
     save(tmps,'tmpv', '-ascii');
 end

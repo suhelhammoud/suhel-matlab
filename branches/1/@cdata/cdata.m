@@ -13,7 +13,7 @@
 function p = cdata(varargin)
 
 % make sure to add Path to the functions directory
-addpath('../functions')
+addpath('functions')
 
 switch nargin
 case 0
